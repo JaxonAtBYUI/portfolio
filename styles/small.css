@@ -1,0 +1,28 @@
+:root {
+    --bgColor: #0b021c;
+}
+
+/* -= ========== TABLE OF CONTENTS ========== =- */
+/* -= = GENERAL - General webapge rules          */
+/* -= = GENERIC CLASSES - Reusable classes       */
+/* -= = INDEX - Hompage CSS                      */
+/* -= ======================================= =- */
+
+/* -= ========== GENERAL ========== =- */
+body {
+    color: white;
+    background-color: var(--bgColor);
+}
+
+/* -= ========== GENERIC CLASSES ========== =- */
+/* =- --- SNAP VERTICAL --- -= */
+.snapVertical {
+    scroll-snap-type: y mandatory;
+    scroll-snap-align: center;
+}
+.snapVertical > section {
+    height: 100vh; 
+}
+
+
+/* -= ========== INDEX ========== =- */

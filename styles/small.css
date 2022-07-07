@@ -1,10 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&family=Rubik+Glitch&family=Ubuntu+Mono&display=swap');
 :root {
-    --bgColor: #0b021c;
+    /* COLOR CONSTANTS */
+    --bgColor: #030006;
+
+    /* FONT CONSTANTS */
+    --Montserrat: "Montserrat";
+    --Roboto: "Roboto";
+    --RubikGlitch: "Rubik Glitch";
+    --UbuntuMono: "Ubuntu Mono";
 }
 
 /* -= ========== TABLE OF CONTENTS ========== =- */
 /* -= = GENERAL - General webapge rules          */
 /* -= = GENERIC CLASSES - Reusable classes       */
+/* -= = CONSTANT CLASSES - Used on all pages     */
 /* -= = INDEX - Hompage CSS                      */
 /* -= ======================================= =- */
 
@@ -12,16 +21,250 @@
 body {
     color: white;
     background-color: var(--bgColor);
+    margin: 0;
 }
 
 /* -= ========== GENERIC CLASSES ========== =- */
-/* =- --- SNAP VERTICAL --- -= */
+/* -~ --- SNAP VERTICAL --- ~- */
 .snapVertical {
+    overflow: scroll;
     scroll-snap-type: y mandatory;
-    scroll-snap-align: center;
+    overflow-x: hidden;
 }
-.snapVertical > section {
-    height: 100vh; 
+.snapVerticalWrapper{
+    display: flex;
+    flex-direction: column;
+}
+.snapVerticalComponent{
+    height: 90vh; 
+    scroll-snap-align: center;
+    margin: 2vh;
+}
+.snapVerticalComponent:first-child {
+    margin-top: 10vh;
 }
 
+/* -~ --- Font Classes --- ~- */
+.montserrat {
+    font-family: var(--Montserrat);
+}
+.roboto {
+    font-family: var(--Roboto);
+}
+.rubikGlitch {
+    font-family: var(--RubikGlitch);
+}
+.ubuntuMono {
+    font-family: var(--UbuntuMono);
+}
+
+/* -= ========== CONSTANT CLASSESS ========== =- */
+/* -~ --- NAV BAR --- ~- */
+nav {
+    overflow: hidden;
+    background-color: rgba(0,0,0,0);
+    margin: 0 auto;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+nav ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: right;
+    padding: 5px;
+    padding-right: 10px;
+}
+
+/* -~ --- FOOTER --- ~- */
+
+
 /* -= ========== INDEX ========== =- */
+/* -~ --- BACKGROUND --- ~- */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    perspective: 10px;
+}
+.background-container::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-1px) scale(1.5);
+    background-size: 100%;
+}
+.stars {
+    /* Stars from Anastasia Goodwin - https://codepen.io/agoodwin */
+    background: transparent url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+    opacity: .60;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: -2;
+    transform-style: preserve-3d;
+    
+}
+.twinkle {
+    /* Twinkles are boxes from Mohammad Abdul Mohaiman - https://codepen.io/mohaiman */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+.twinkle li {
+    position: fixed;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    width: 22vw;
+    height: 22vw;
+    background: radial-gradient(#030006fe, #03000600);
+    animation: twinkle 25s linear infinite;
+    bottom: -150px;
+    border-radius: 50%;
+
+}
+.twinkle li:nth-child(1) {
+    left: -5%;
+    animation-delay: 18s;
+    animation-duration: 25s;
+}
+.twinkle li:nth-child(2) {
+    left: 10%;
+    animation-delay: 2s;
+    animation-duration: 39s;
+}
+.twinkle li:nth-child(3) {
+    left: 20%;
+    animation-delay: 6s;
+    animation-duration: 74s;
+}
+.twinkle li:nth-child(4) {
+    left: 30%;
+    animation-delay: 0s;
+    animation-duration: 50s;
+}
+.twinkle li:nth-child(5) {
+    left: 40%;
+    animation-delay: 9s;
+    animation-duration: 61s;
+}
+.twinkle li:nth-child(6) {
+    left: 50%;
+    animation-delay: 16s;
+    animation-duration: 34s;
+}
+.twinkle li:nth-child(7) {
+    left: 60%;
+    animation-delay: 11s;
+    animation-duration: 97s;
+}
+.twinkle li:nth-child(8) {
+    left: 70%;
+    animation-delay: 7s;
+    animation-duration: 33s;
+}
+.twinkle li:nth-child(9) {
+    left: 80%;
+    animation-delay: 19s;
+    animation-duration: 20s;
+}
+.twinkle li:nth-child(10) {
+    left: 90%;
+    animation-delay: 6s;
+    animation-duration: 54s;
+}
+@keyframes twinkle {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+    }
+}
+/* -~ --- INDEX INTRODUCTION --- ~- */
+#indexIntroduction {
+text-align: right;
+}
+#indexIntroduction h1 {
+    font-size: 6rem;
+    letter-spacing: 3px;
+}
+#fixLetterRight {
+    position: relative;
+    left: .6rem;
+
+}
+/* Glitch Effect */
+.glitch {
+    position: relative;
+    color: #fefee2;
+    letter-spacing: -4px;
+    text-shadow: 0.05em 0 0 #00ed75, -0.03em -0.04em 0 #fc00ff,
+        0.025em 0.04em 0 #ed7500;
+    animation: glitch 3s infinite;
+}
+.glitch span {
+    top: 0;
+    left: 0;
+}
+.glitch1 {
+    position: absolute;
+    float: right;
+    animation: glitch 2.25s infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+    transform: translate(-0.04em, -0.03em);
+    opacity: 0.75;
+}
+.glitch2 {
+    position: absolute;
+    float: left;
+    animation: glitch 1.45s infinite;
+    clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+    transform: translate(0.04em, 0.03em);
+    opacity: 0.75;
+}
+@keyframes glitch {
+    0% {
+        text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+            0.025em 0.04em 0 #ed7500;
+    }
+    15% {
+        text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+            0.025em 0.04em 0 #ed7500;
+    }
+    16% {
+        text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+            -0.05em -0.05em 0 #ed7500;
+    }
+    49% {
+        text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+            -0.05em -0.05em 0 #ed7500;
+    }
+    50% {
+        text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+            0 -0.04em 0 #ed7500;
+    }
+    99% {
+        text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+            0 -0.04em 0 #ed7500;
+    }
+    100% {
+        text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
+            -0.04em -0.025em 0 #ed7500;
+    }
+}

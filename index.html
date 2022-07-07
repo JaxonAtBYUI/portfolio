@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="snapVertical">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +7,22 @@
     <link rel="stylesheet" href="styles/small.css">
     <title>Jaxon Hamm</title>
 </head>
-<body>
+<div class="indexBackgroundContainer" aria-hidden="true">
+    <div class="stars"></div>
+    <ul class="twinkle">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<body class="montserrat" >
     <header>
         <nav>
             <ul>
@@ -15,25 +30,31 @@
             </ul>
         </nav>
     </header>
-    <main class="snapVertical">
-        <section id="indexIntroduction">
-            <h1>Jaxon Hamm</h1>
+    <main class="snapVerticalWrapper">
+        <section id="indexIntroduction" class="snapVerticalComponent">
+            <h1 class="roboto" aria-describedby="Jaxon Hamm"><span id="fixLetterRight">Ja</span>
+                <span class="rubikGlitch glitch">
+                    <span class="glitch1">x</span>
+                    x
+                    <span class="glitch2">x</span>
+                </span>
+                on Hamm</h1>
             <p>I make things.</p>
         </section>
-        <section id="indexWelcome">
+        <section id="indexWelcome" class="snapVerticalComponent">
             <h2>Welcome to my page.</h2>
             <p>Here you'll find what I'm working on and see the progress as I go.</p>
         </section>
-        <section id="indexHighlights">
+        <section id="indexHighlights" class="snapVerticalComponent">
             <h2>Here are some highlights</h2>
             <div id="indexParalaxBox1"></div>
             <div id="indexParalaxBox2"></div>
             <div id="indexParalaxBox3"></div>
         </section>
-        <section id="indexSkills">
+        <section id="indexSkills" class="snapVerticalComponent">
             <h2>These are some of my skills</h2>
         </section>
-        <section id="indexContactMe">
+        <section id="indexContactMe" class="snapVerticalComponent">
             <p>Want to work together?</p>
             <h2>Contact Me</h2>
             <form method="get" action="thankyou.html">

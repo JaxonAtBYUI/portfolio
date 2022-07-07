@@ -132,7 +132,7 @@ nav ul {
     height: 20px;
     width: 22vw;
     height: 22vw;
-    background: radial-gradient(#030006fe, #03000600);
+    background: radial-gradient(#030006fe, #03000658);
     animation: twinkle 25s linear infinite;
     bottom: -150px;
     border-radius: 50%;
@@ -209,7 +209,10 @@ text-align: right;
     left: .6rem;
 
 }
-/* Glitch Effect */
+#indexIntroduction p {
+    font-size: 3rem;
+}
+/* -~ --- GLITCH EFFECT --- ~- */
 .glitch {
     position: relative;
     color: #fefee2;

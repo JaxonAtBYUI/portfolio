@@ -2,6 +2,10 @@
 :root {
     /* COLOR CONSTANTS */
     --bgColor: #030006;
+    --glitchColor1: #fc00ff;
+    --glitchColor2: #00ed75;
+    --glitchColor3: #ed7500;
+    --glitchColor4: #00fffc;
 
     /* FONT CONSTANTS */
     --Montserrat: "Montserrat";
@@ -15,6 +19,8 @@
 /* -= = GENERIC CLASSES - Reusable classes       */
 /* -= = CONSTANT CLASSES - Used on all pages     */
 /* -= = INDEX - Hompage CSS                      */
+/* -= = ANIMATION - Classes for animations       */
+/* -= = KEYFRAMES - Defined animations           */
 /* -= ======================================= =- */
 
 /* -= ========== GENERAL ========== =- */
@@ -29,6 +35,9 @@ body {
 }
 
 /* -= ========== GENERIC CLASSES ========== =- */
+/* -~ --- SNAP VERTICAL                 --- ~- */
+/* -~ --- FONT CLASSES                  --- ~- */
+
 /* -~ --- SNAP VERTICAL --- ~- */
 .snapVertical {
     overflow: scroll;
@@ -41,7 +50,7 @@ body {
     flex-direction: column;
 }
 .snapVerticalComponent{
-    height: 90vh; 
+    height: 95vh; 
     scroll-snap-align: center;
     margin: 2vh;
 }
@@ -49,7 +58,7 @@ body {
     margin-top: 10vh;
 }
 
-/* -~ --- Font Classes --- ~- */
+/* -~ --- FONT CLASSES --- ~- */
 .montserrat {
     font-family: var(--Montserrat);
 }
@@ -64,6 +73,9 @@ body {
 }
 
 /* -= ========== CONSTANT CLASSESS ========== =- */
+/* -~ --- NAV BAR --- ~- */
+/* -~ --- FOOTER --- ~-  */
+
 /* -~ --- NAV BAR --- ~- */
 /* This gradient will expand out to back the options on the navbar when the navigation is clicked. */
 /* background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgba(7, 0, 14, 0.8076272745426296) 15%, rgba(3, 0, 6, 1) 100%); */
@@ -86,6 +98,10 @@ nav ul {
 
 
 /* -= ========== INDEX ========== =- */
+/* -~ --- BACKGROUND          --- ~- */
+/* -~ --- INDEX INTRODUCTION  --- ~- */
+
+
 /* -~ --- BACKGROUND --- ~- */
 .background-container {
     position: fixed;
@@ -120,6 +136,71 @@ nav ul {
     transform-style: preserve-3d;
     
 }
+
+/* -~ --- INDEX INTRODUCTION --- ~- */
+#indexIntroduction {
+text-align: right;
+}
+#indexIntroduction h1 {
+    font-size: 6rem;
+    letter-spacing: 3px;
+}
+#fixLetterRight {
+    position: relative;
+    left: .6rem;
+
+}
+#indexIntroduction p {
+    font-size: 3rem;
+}
+#indexIntroduction .glitchImageContainer {
+    float: left;
+    left: 10%;
+    bottom: 40%;
+}
+#indexIntroduction .glitchImageContainer img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* -= ========== ANIMATION CLASSES ========== =- */
+/* -~ --- GLITCH EFFECT TEXT              --- ~- */
+/* -~ --- TWINKLE CLASSES                 --- ~- */
+/* -~ --- GLITCH IMAGES                   --- ~- */
+
+/* -~ --- GLITCH EFFECT TEXT --- ~- */
+.glitch {
+    position: relative;
+    color: #fefee2;
+    letter-spacing: -4px;
+    text-shadow: 0.05em 0 0 var(--glitchColor4), -0.03em -0.04em 0 var(--glitchColor1),
+        0.025em 0.04em 0 var(--glitchColor2);
+    animation: glitch 3s infinite;
+}
+.glitch span {
+    top: 0;
+    left: 0;
+}
+.glitch1 {
+    position: absolute;
+    float: right;
+    animation: glitch 2.25s infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+    transform: translate(-0.04em, -0.03em);
+    opacity: 0.75;
+}
+.glitch2 {
+    position: absolute;
+    float: left;
+    animation: glitch 1.45s infinite;
+    clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+    transform: translate(0.04em, 0.03em);
+    opacity: 0.75;
+}
+
+/* -~ --- TWINKLE CLASSES --- ~- */
 .twinkle {
     /* Twinkles are boxes from Mohammad Abdul Mohaiman - https://codepen.io/mohaiman */
     position: absolute;
@@ -194,100 +275,8 @@ nav ul {
     animation-delay: 6s;
     animation-duration: 54s;
 }
-@keyframes twinkle {
-    0% {
-        transform: translateY(0) rotate(0deg);
-    }
-    100% {
-        transform: translateY(-1000px) rotate(720deg);
-    }
-}
-/* -~ --- INDEX INTRODUCTION --- ~- */
-#indexIntroduction {
-text-align: right;
-}
-#indexIntroduction h1 {
-    font-size: 6rem;
-    letter-spacing: 3px;
-}
-#fixLetterRight {
-    position: relative;
-    left: .6rem;
 
-}
-#indexIntroduction p {
-    font-size: 3rem;
-}
-#indexIntroduction .glitchImageContainer {
-    float: left;
-    left: 10%;
-    bottom: 40%;
-}
-#indexIntroduction .glitchImageContainer img{
-    width: 100%;
-    height: 100%;
-}
-
-/* -~ --- GLITCH EFFECT TEXT --- ~- */
-.glitch {
-    position: relative;
-    color: #fefee2;
-    letter-spacing: -4px;
-    text-shadow: 0.05em 0 0 #00ed75, -0.03em -0.04em 0 #fc00ff,
-        0.025em 0.04em 0 #ed7500;
-    animation: glitch 3s infinite;
-}
-.glitch span {
-    top: 0;
-    left: 0;
-}
-.glitch1 {
-    position: absolute;
-    float: right;
-    animation: glitch 2.25s infinite;
-    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
-    transform: translate(-0.04em, -0.03em);
-    opacity: 0.75;
-}
-.glitch2 {
-    position: absolute;
-    float: left;
-    animation: glitch 1.45s infinite;
-    clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
-    transform: translate(0.04em, 0.03em);
-    opacity: 0.75;
-}
-@keyframes glitch {
-    0% {
-        text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
-            0.025em 0.04em 0 #ed7500;
-    }
-    15% {
-        text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
-            0.025em 0.04em 0 #ed7500;
-    }
-    16% {
-        text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
-            -0.05em -0.05em 0 #ed7500;
-    }
-    49% {
-        text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
-            -0.05em -0.05em 0 #ed7500;
-    }
-    50% {
-        text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
-            0 -0.04em 0 #ed7500;
-    }
-    99% {
-        text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
-            0 -0.04em 0 #ed7500;
-    }
-    100% {
-        text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
-            -0.04em -0.025em 0 #ed7500;
-    }
-}
-/* -~ --- Glitch Effect Images --- ~- */
+/* -~ --- GLITCH IMAGES --- ~- */
 .glitchImageContainer {
 
       position:relative;
@@ -310,10 +299,8 @@ text-align: right;
     animation: glitchImg2 37s infinite linear alternate-reverse;
 }
 .glitchImageA {
-    /* variation */
     left: -5px;
     opacity: .5;
-    /* important: opaque background masks the original */
     background: var(--bgColor);
     animation: glitchImg1 48s infinite linear alternate-reverse;
 }
@@ -323,43 +310,107 @@ text-align: right;
 .glitchJump2 {
     left: 10vw;
 }
+
+
+/* -= ========== KEYFRAMES ========== =- */
+/* -~ --- GLITCH TEXT --- ~- */
+@keyframes glitch {
+    0% {
+        text-shadow: 0.05em 0 0 var(--glitchColor4), -0.03em -0.04em 0 var(--glitchColor1),
+            0.025em 0.04em 0 var(--glitchColor2);
+    }
+
+    15% {
+        text-shadow: 0.05em 0 0 var(--glitchColor4), -0.03em -0.04em 0 var(--glitchColor1),
+            0.025em 0.04em 0 var(--glitchColor2);
+    }
+
+    16% {
+        text-shadow: -0.05em -0.025em 0 var(--glitchColor4), 0.025em 0.035em 0 var(--glitchColor1),
+            -0.05em -0.05em 0 var(--glitchColor2);
+    }
+
+    49% {
+        text-shadow: -0.05em -0.025em 0 var(--glitchColor4), 0.025em 0.035em 0 var(--glitchColor1),
+            -0.05em -0.05em 0 var(--glitchColor2);
+    }
+
+    50% {
+        text-shadow: 0.05em 0.035em 0 var(--glitchColor4), 0.03em 0 0 var(--glitchColor1),
+            0 -0.04em 0 var(--glitchColor2);
+    }
+
+    99% {
+        text-shadow: 0.05em 0.035em 0 var(--glitchColor4), 0.03em 0 0 var(--glitchColor1),
+            0 -0.04em 0 var(--glitchColor2);
+    }
+
+    100% {
+        text-shadow: -0.05em 0 0 var(--glitchColor4), -0.025em -0.04em 0 var(--glitchColor1),
+            -0.04em -0.025em 0 var(--glitchColor2);
+    }
+}
+
+/* -~ --- GLITCH IMAGES --- ~- */
 @keyframes glitchImg1 {
     0% {
         clip-path: inset(40% 0 61% 0);
     }
+
     20% {
         clip-path: inset(92% 0 1% 0);
     }
+
     40% {
         clip-path: inset(43% 0 1% 0);
     }
+
     60% {
         clip-path: inset(1% 0 58% 0);
     }
+
     80% {
         clip-path: inset(54% 0 7% 0);
     }
+
     100% {
         clip-path: inset(58% 0 43% 0);
     }
 }
+
 @keyframes glitchImg2 {
     0% {
         clip-path: inset(92% 0 1% 0);
     }
+
     20% {
         clip-path: inset(54% 0 7% 0);
     }
+
     40% {
         clip-path: inset(25% 0 58% 0);
     }
+
     60% {
         clip-path: inset(1% 0 43% 0);
     }
+
     80% {
         clip-path: inset(40% 0 61% 0);
     }
+
     100% {
         clip-path: inset(43% 0 1% 0);
+    }
+}
+
+/* -~ --- TWINKLE EFFECT --- ~- */
+@keyframes twinkle {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
     }
 }

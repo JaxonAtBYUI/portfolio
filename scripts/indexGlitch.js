@@ -38,7 +38,7 @@ function delcareStyle() {
         direction = 'left';
     }
 
-    return `${direction}: ${distance}`
+    return `${direction}: ${distance}vw`
 }
 
 // TO TIMER

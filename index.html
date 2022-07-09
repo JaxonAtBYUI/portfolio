@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/.css">
-    <script src="scripts/indexGlitch.js" defer=""></script>
+    <script src="scripts/indexGlitch.js" defer></script>
+    <script src="scripts/fades.js" defer></script>
     <title>Jaxon Hamm</title>
 </head>
 <body class="montserrat" >
@@ -44,15 +45,25 @@
                 </span>
                 on Hamm</h1>
             <p>I make things.</p>
-            <div class="glitchImageContainer">
+            <div class="glitchImageContainer" id="indexGlitchTriangles">
                 <img src="images/drawing.svg" alt="glitchy colorful triangles" class="glitchImage">
                 <img src="images/drawing.svg" alt="glitchy colorful triangles" class="glitchImageB" id="GI1">
                 <img src="images/drawing.svg" alt="glitchy colorful triangles" class="glitchImageA" id="GI2">
             </div>
         </section>
         <section id="indexWelcome" class="snapVerticalComponent">
-            <h2>Welcome to my page.</h2>
-            <p>Here you'll find what I'm working on and see the progress as I go.</p>
+            <h2 class="fadeLeft">Welcome to my page.</h2>
+            <div id="indexCirclesContainer">
+                <img src="images/indexBlueCircles.svg" alt="light blue rotating circle." id="rotImg1">
+                <img src="images/indexBlueCircles.svg" alt="light blue rotating circle." id="GI3">
+                <img src="images/indexGreenCircles.svg" alt="light green rotating cirlce" id="rotImg2">
+                <img src="images/indexGreenCircles.svg" alt="light green rotating cirlce" id="GI4">
+                <img src="images/indexOrangeCircles.svg" alt="light orange rotating circle" id="rotImg3">
+                <img src="images/indexOrangeCircles.svg" alt="light orange rotating circle" id="GI5">
+                <img src="images/indexPurpleCircles.svg" alt="light purple rotating cirlce" id="rotImg4">
+                <img src="images/indexPurpleCircles.svg" alt="light purple rotating cirlce" id="GI6">
+            </div>
+            <p class="fadeRight">Here you'll find what I'm working on and see the progress as I go.</p>
         </section>
         <section id="indexHighlights" class="snapVerticalComponent">
             <h2>Here are some highlights</h2>

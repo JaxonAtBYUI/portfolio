@@ -100,6 +100,7 @@ nav ul {
 /* -= ========== INDEX ========== =- */
 /* -~ --- BACKGROUND          --- ~- */
 /* -~ --- INDEX INTRODUCTION  --- ~- */
+/* -~ --- INDEX WELCOMVE      --- ~- */
 
 
 /* -~ --- BACKGROUND --- ~- */
@@ -162,8 +163,63 @@ text-align: right;
     width: 100%;
     height: 100%;
 }
+#indexGlitchTriangles {
+    max-width: 33vw;
+}
 
-
+/* -~ --- INDEX WELCOME --- ~- */
+#indexWelcome {
+    position: relative;
+}
+#indexWelcome h2 {
+    font-size: 2rem;
+}
+#indexWelcome p {
+    position: absolute;
+    font-size: 1.5rem;
+    bottom: 2vh;
+    right: 2vh;
+}
+#indexCirclesContainer {
+    height: 100%;
+    position: relative;
+    margin-left: 25%;
+    max-width: 400px;
+    max-height: 400px;
+}
+#indexCirclesContainer img {
+    position: absolute;
+    width: 100%;
+}
+/* animation: glitchImg2 37s infinite linear alternate-reverse; */
+#rotImg1 {
+    animation: rotating 35s linear reverse infinite;
+}
+#GI3 {
+    animation: glitchRotImg1 35s linear reverse infinite;
+    opacity: .3;
+}
+#rotImg2 {
+    animation: rotating 40s linear infinite;
+}
+#GI4 {
+    animation: glitchRotImg2 40s linear infinite;
+    opacity: .2;
+}
+#rotImg3 {
+    animation: rotating 25s linear reverse infinite;
+}
+#GI5 {
+    animation: glitchRotImg1 25s linear reverse infinite;
+    opacity: .4;
+}
+#rotImg4 {
+    animation: rotating 52s linear infinite;
+}
+#GI6 {
+    animation: glitchRotImg2 52s linear infinite;
+    opacity: .3;
+}
 
 /* -= ========== ANIMATION CLASSES ========== =- */
 /* -~ --- GLITCH EFFECT TEXT              --- ~- */
@@ -311,6 +367,26 @@ text-align: right;
     left: 10vw;
 }
 
+/* -~ --- STANDARD ROTATION CLASS --- ~- */
+.rotating {
+    animation: rotating 2s linear infinite;
+}
+
+/* -~ --- FADE RIGHT CLASSES --- ~- */
+.fadeRight {
+    opacity: 0;
+}
+.fadeRightA {
+    animation: fadeRight 2s ease-out;
+}
+
+/* -~ --- FADE LEFT CLASSES --- ~- */
+.fadeLeft {
+    opacity: 0;
+}
+.fadeLeftA {
+    animation: fadeLeft 2s ease-out;
+}
 
 /* -= ========== KEYFRAMES ========== =- */
 /* -~ --- GLITCH TEXT --- ~- */
@@ -319,32 +395,26 @@ text-align: right;
         text-shadow: 0.05em 0 0 var(--glitchColor4), -0.03em -0.04em 0 var(--glitchColor1),
             0.025em 0.04em 0 var(--glitchColor2);
     }
-
     15% {
         text-shadow: 0.05em 0 0 var(--glitchColor4), -0.03em -0.04em 0 var(--glitchColor1),
             0.025em 0.04em 0 var(--glitchColor2);
     }
-
     16% {
         text-shadow: -0.05em -0.025em 0 var(--glitchColor4), 0.025em 0.035em 0 var(--glitchColor1),
             -0.05em -0.05em 0 var(--glitchColor2);
     }
-
     49% {
         text-shadow: -0.05em -0.025em 0 var(--glitchColor4), 0.025em 0.035em 0 var(--glitchColor1),
             -0.05em -0.05em 0 var(--glitchColor2);
     }
-
     50% {
         text-shadow: 0.05em 0.035em 0 var(--glitchColor4), 0.03em 0 0 var(--glitchColor1),
             0 -0.04em 0 var(--glitchColor2);
     }
-
     99% {
         text-shadow: 0.05em 0.035em 0 var(--glitchColor4), 0.03em 0 0 var(--glitchColor1),
             0 -0.04em 0 var(--glitchColor2);
     }
-
     100% {
         text-shadow: -0.05em 0 0 var(--glitchColor4), -0.025em -0.04em 0 var(--glitchColor1),
             -0.04em -0.025em 0 var(--glitchColor2);
@@ -382,23 +452,18 @@ text-align: right;
     0% {
         clip-path: inset(92% 0 1% 0);
     }
-
     20% {
         clip-path: inset(54% 0 7% 0);
     }
-
     40% {
         clip-path: inset(25% 0 58% 0);
     }
-
     60% {
         clip-path: inset(1% 0 43% 0);
     }
-
     80% {
         clip-path: inset(40% 0 61% 0);
     }
-
     100% {
         clip-path: inset(43% 0 1% 0);
     }
@@ -412,5 +477,86 @@ text-align: right;
 
     100% {
         transform: translateY(-1000px) rotate(720deg);
+    }
+}
+
+/* -~ --- FULL ROTATION--- ~- */
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* -~ --- ROTATING AND GLITCHING --- ~- */
+@keyframes glitchRotImg1 {
+    0% {
+        clip-path: inset(92% 0 1% 0);
+        transform: rotate(0deg)
+    }
+    20% {
+        clip-path: inset(54% 0 7% 0);
+    }
+    40% {
+        clip-path: inset(25% 0 58% 0);
+    }
+    60% {
+        clip-path: inset(1% 0 43% 0);
+    }
+    80% {
+        clip-path: inset(40% 0 61% 0);
+    }
+    100% {
+        clip-path: inset(43% 0 1% 0);
+        transform: rotate(360deg);
+        }
+}
+@keyframes glitchRotImg2 {
+    0% {
+        clip-path: inset(92% 0 1% 0);
+        transform: rotate(0deg);
+    }
+    20% {
+        clip-path: inset(54% 0 7% 0);
+    }
+    40% {
+        clip-path: inset(25% 0 58% 0);
+    }
+    60% {
+        clip-path: inset(1% 0 43% 0);
+    }
+    80% {
+        clip-path: inset(40% 0 61% 0);
+    }
+    100% {
+        clip-path: inset(43% 0 1% 0);
+        transform: rotate(360deg);
+    }
+}
+
+/* -~ --- FADE IN RIGHT --- ~- */
+@keyframes fadeRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* -~ --- FADE IN LEFT --- ~- */
+@keyframes fadeLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

@@ -72,6 +72,10 @@ body {
 .ubuntuMono {
     font-family: var(--UbuntuMono);
 }
+.noWrap {
+    white-space: nowrap;
+    
+}
 
 /* -~ --- FOLDER ICON --- ~- */
 .folderIcon {
@@ -200,16 +204,10 @@ nav ul {
 
 /* -~ --- INDEX INTRODUCTION --- ~- */
 #indexIntroduction {
-text-align: right;
+    text-align: right;
 }
 #indexIntroduction h1 {
     font-size: 6rem;
-    letter-spacing: 3px;
-}
-#fixLetterRight {
-    position: relative;
-    left: .6rem;
-
 }
 #indexIntroduction p {
     font-size: 3rem;
@@ -327,9 +325,7 @@ text-align: right;
 .glitch {
     position: relative;
     color: #fefee2;
-    letter-spacing: -4px;
-    text-shadow: 0.05em 0 0 var(--glitchColor4), -0.03em -0.04em 0 var(--glitchColor1),
-        0.025em 0.04em 0 var(--glitchColor2);
+    text-shadow: 0.05em 0 0 var(--glitchColor4), -0.03em -0.04em 0 var(--glitchColor1), 0.025em 0.04em 0 var(--glitchColor2);
     animation: glitch 3s infinite;
     top: 0;
     left: 0;

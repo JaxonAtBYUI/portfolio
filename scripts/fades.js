@@ -1,8 +1,8 @@
 /* -= ========== FADE RIGHT ========== =- */
 // Get all the images
 const fadeRights = document.querySelectorAll('.fadeRight');
-const options = {threshold: .4, rootMargin:"0px 0px 200px 0px"}
 const fadeLefts = document.querySelectorAll('.fadeLeft');
+const options = {threshold: .4, rootMargin:"0px 0px 0px 0px"}
 
 // Create a new observer
 const ioFR = new IntersectionObserver (

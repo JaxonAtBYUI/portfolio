@@ -37,6 +37,7 @@ body {
 /* -= ========== GENERIC CLASSES ========== =- */
 /* -~ --- SNAP VERTICAL                 --- ~- */
 /* -~ --- FONT CLASSES                  --- ~- */
+/* -~ --- FOLDER ICON                   --- ~- */
 
 /* -~ --- SNAP VERTICAL --- ~- */
 .snapVertical {
@@ -50,13 +51,14 @@ body {
     flex-direction: column;
 }
 .snapVerticalComponent{
-    height: 95vh; 
+    height: 97vh; 
     scroll-snap-align: center;
     margin: 2vh;
 }
 .snapVerticalComponent:first-child {
     margin-top: 10vh;
 }
+
 /* -~ --- FONT CLASSES --- ~- */
 .montserrat {
     font-family: var(--Montserrat);
@@ -69,6 +71,63 @@ body {
 }
 .ubuntuMono {
     font-family: var(--UbuntuMono);
+}
+
+/* -~ --- FOLDER ICON --- ~- */
+.folderIcon {
+    text-align: center;
+}
+.folderIcon a {
+    text-decoration: none;
+    color: white;
+}
+.folderIcon img {
+    width: 95%;
+    transition: .5s;
+}
+.folderIcon:hover img {
+    transform: scale(1.05);
+}
+
+/* -~ --- SLIDESHOW --- ~- */
+.slideShowContainer {
+    position: relative;
+    margin: auto;
+}
+.slide {
+    display: none;
+}
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    width: 1rem;
+    height: 1rem;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 50%;
+    user-select: none;
+    border: 3px solid var(--bgColor)
+}
+.next {
+    right: 0;
+}
+.prev:hover, .next:hover {
+    border-color: white;
+}
+
+/* -~ --- ALIGNMENT CLASSES --- ~- */
+.centerVertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* -= ========== CONSTANT CLASSESS ========== =- */
@@ -99,7 +158,9 @@ nav ul {
 /* -= ========== INDEX ========== =- */
 /* -~ --- BACKGROUND          --- ~- */
 /* -~ --- INDEX INTRODUCTION  --- ~- */
-/* -~ --- INDEX WELCOMVE      --- ~- */
+/* -~ --- INDEX WELCOME       --- ~- */
+/* -~ --- INDEX HIGHLIGHTS    --- ~- */
+/* -~ --- INDEX SKILLS        --- ~- */
 
 
 /* -~ --- BACKGROUND --- ~- */
@@ -213,12 +274,49 @@ text-align: right;
     opacity: .4;
 }
 #rotImg4 {
-    animation: rotating 52s linear infinite;
+    animation: rotating 49s linear infinite;
 }
 #GI6 {
-    animation: glitchRotImg2 52s linear infinite;
+    animation: glitchRotImg2 49s linear infinite;
     opacity: .3;
 }
+
+/* -~ --- INDEX HIGHLIGHTS --- ~- */
+#indexFolders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#indexFolders .folderIcon {
+    height: 20vh;
+    padding: 5px;
+}
+#indexFolders .folderIcon img {
+    height: 20vh;
+}
+
+/* -~ --- INDEX SKILLS --- ~- */
+#indexSkills h2{
+    font-size: 2rem;
+}
+#indexSkills .slideShowContainer {
+    width: 95%;
+    margin: auto;
+}
+#indexSkills.slideShowContainer.slide {
+    width: 100%;
+    display: flex;
+}
+.indexSlideTextContainer {
+    padding: 3px;
+    width: 60%;
+    margin: 0 auto;
+}
+.indexSlideTextContainer h3{
+    margin: 0;
+    font-size: 3rem;
+}
+
 
 /* -= ========== ANIMATION CLASSES ========== =- */
 /* -~ --- GLITCH EFFECT TEXT              --- ~- */
@@ -233,22 +331,22 @@ text-align: right;
     text-shadow: 0.05em 0 0 var(--glitchColor4), -0.03em -0.04em 0 var(--glitchColor1),
         0.025em 0.04em 0 var(--glitchColor2);
     animation: glitch 3s infinite;
-}
-.glitch span {
     top: 0;
     left: 0;
 }
-.glitch1 {
+.glitch::before, .glitch::after {
+    content: attr(data-text);
     position: absolute;
-    float: right;
+    top: 0;
+    left: 0;
+}
+.glitch::before {
     animation: glitch 2.25s infinite;
     clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
     transform: translate(-0.04em, -0.03em);
     opacity: 0.75;
 }
-.glitch2 {
-    position: absolute;
-    float: left;
+.glitch::after {
     animation: glitch 1.45s infinite;
     clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
     transform: translate(0.04em, 0.03em);

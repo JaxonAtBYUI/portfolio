@@ -205,6 +205,7 @@ nav ul {
 /* -~ --- INDEX INTRODUCTION --- ~- */
 #indexIntroduction {
     text-align: right;
+    padding: 3vh 0;
 }
 #indexIntroduction h1 {
     font-size: 6rem;
@@ -228,6 +229,7 @@ nav ul {
 /* -~ --- INDEX WELCOME --- ~- */
 #indexWelcome {
     position: relative;
+    padding: 3vh 0;
 }
 #indexWelcome h2 {
     font-size: 2rem;
@@ -280,6 +282,9 @@ nav ul {
 }
 
 /* -~ --- INDEX HIGHLIGHTS --- ~- */
+#indexHighlights {
+    padding: 3vh 0;
+}
 #indexFolders {
     display: flex;
     flex-direction: column;

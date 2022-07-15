@@ -1,0 +1,33 @@
+@media only screen and (min-width: 450px) {
+    /* -= ========== TABLE OF CONTENTS ========== =- */
+    /* -= = GENERAL - General webapge rules          */
+    /* -= = GENERIC CLASSES - Reusable classes       */
+    /* -= = CONSTANT CLASSES - Used on all pages     */
+    /* -= = INDEX - Hompage CSS                      */
+    /* -= = ANIMATION - Classes for animations       */
+    /* -= = KEYFRAMES - Defined animations           */
+    /* -= ======================================= =- */
+    
+
+    /* -= ========== CONSTANT CLASSESS ========== =- */
+    /* -~ --- NAV BAR                         --- ~- */
+    
+    /* -~ --- NAV BAR --- ~- */
+    .sideNav {
+        padding-top: 15px;
+        max-width: 100vw;
+    }
+    .sideNav a {
+        font-size: 18px;
+    }
+
+    /* -= ========== INDEX ========== =- */
+    /* -~ --- BACKGROUND          --- ~- */
+    /* -~ --- INDEX INTRODUCTION  --- ~- */
+    /* -~ --- INDEX WELCOME       --- ~- */
+    /* -~ --- INDEX HIGHLIGHTS    --- ~- */
+    /* -~ --- INDEX SKILLS        --- ~- */
+    /* -~ --- INDEX CONTACT ME    --- ~- */
+
+    /* -~ --- INDEX WELCOME --- ~- */
+}

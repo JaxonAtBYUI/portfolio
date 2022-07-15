@@ -54,7 +54,7 @@ body {
     flex-direction: column;
 }
 .snapVerticalComponent{
-    height: 80vh; 
+    height: 110vh; 
     scroll-snap-align: center;
     margin: 2vh;
 }

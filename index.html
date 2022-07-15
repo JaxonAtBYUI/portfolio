@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/.css">
+    <script src="scripts/main.js" defer></script>
     <script src="scripts/indexGlitch.js" defer></script>
     <script src="scripts/fades.js" defer></script>
     <script src="scripts/slideshow.js" defer></script>
@@ -30,11 +31,14 @@
         </ul>
     </div>
     <header>
-        <nav>
-            <ul>
-                <li>&#x2630;</li>
-            </ul>
-        </nav>
+        <a href="javascript:void(0)" class="openBtn" onclick="openNav()">&#x276f;</a>
+        <nav id="navBar" class="sideNav">
+            <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
     </header>
     <main class="snapVerticalWrapper">
         <section id="indexIntroduction" class="snapVerticalComponent">
@@ -122,19 +126,18 @@
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
         </section>
-        <section id="indexContactMe" class="snapVerticalComponent">
-            <p>Want to work together?</p>
-            <h2>Contact Me</h2>
+        <section id="indexContactMe" class="snapVerticalComponent centerVertical">
+            <p class="fadeRight">Want to work together?</p>
+            <h2 class="fadeLeft">Contact Me</h2>
             <form method="get" action="thankyou.html">
                 <fieldset>
-                    <legend> Contact Me</legend>
-                    <label class="formTop">First Name * <input type="text" name="fname" required></label>
-                    <label class="formTop">Last Name * <input type="text" name="lname" required></label>
-                    <label class="formTop">Email * <input type="email" name="email" placeholder="example@email.com" required></label>
-                    <label class="formTop">Business Description <textarea class="formTextArea" name="message" ></textarea></label>
+                    <label class="formTop">First Name <input type="text" name="fname" required></label>
+                    <label class="formTop">Last Name <input type="text" name="lname" required></label>
+                    <label class="formTop">Email <input type="email" name="email" placeholder="example@email.com" required></label>
+                    <label class="formTop">Message <textarea class="formTextArea roboto" name="message" required></textarea></label>
+                    <input type="hidden" id="date" name="date" value="CurrentTime">
+                    <input type="submit" value="Contact Me" class="formSubmit">
                 </fieldset>
-                <input type="hidden" id="date" name="date" value="CurrentTime">
-                <input type="submit" value="Contact Me" class="formSubmit">
             </form>
         </div>
         </section>

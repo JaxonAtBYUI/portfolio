@@ -1,5 +1,5 @@
 /* -= ========== GLITCH IMAGE RANDOM JUMPS ========== =- */
-const MAX_DISTANCE = 3;
+const MAX_DISTANCE = 5;
 const MAX_DELAY_BEFORE = 2;
 const MAX_DELAY_AFTER = 1;
 const RUNNING = true;

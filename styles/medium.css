@@ -8,6 +8,12 @@
     /* -= = KEYFRAMES - Defined animations           */
     /* -= ======================================= =- */
     
+    /* -= ========== GENERIC CLASSES ========== =- */
+    /* -~ --- SNAP VERTICAL --- ~- */
+    .snapVerticalComponent {
+        height: 100vh;
+    }
+
 
     /* -= ========== CONSTANT CLASSESS ========== =- */
     /* -~ --- NAV BAR                         --- ~- */

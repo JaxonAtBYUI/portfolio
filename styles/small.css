@@ -234,8 +234,9 @@ input::selection {
     display: block;
     transition: 0.3s;
 }
-.sideNav a:hover {
-    color: #f1f1f1;
+.sideNav a:hover:not(:nth-child(1)) {
+    color: var(--bgColor);
+    background-color: white;
 }
 .sideNav .closeBtn {
     position: absolute;

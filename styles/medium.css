@@ -1,39 +1,27 @@
 @media only screen and (min-width: 450px) {
-    /* -= ========== TABLE OF CONTENTS ========== =- */
-    /* -= = GENERAL - General webapge rules          */
-    /* -= = GENERIC CLASSES - Reusable classes       */
-    /* -= = CONSTANT CLASSES - Used on all pages     */
-    /* -= = INDEX - Hompage CSS                      */
-    /* -= = ANIMATION - Classes for animations       */
-    /* -= = KEYFRAMES - Defined animations           */
-    /* -= ======================================= =- */
-    
-    /* -= ========== GENERIC CLASSES ========== =- */
-    /* -~ --- SNAP VERTICAL --- ~- */
+    /* -= ========== MESSY TEMP HACK ========== =- */
+    .snapVertical {
+        scroll-snap-type: y mandatory;
+    }
     .snapVerticalComponent {
         height: 100vh;
+        scroll-snap-align: center;
+        margin: 2vw;
     }
-
-
-    /* -= ========== CONSTANT CLASSESS ========== =- */
-    /* -~ --- NAV BAR                         --- ~- */
-    
-    /* -~ --- NAV BAR --- ~- */
-    .sideNav {
-        padding-top: 15px;
-        max-width: 100vw;
+    #indexFolders {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
-    .sideNav a {
-        font-size: 18px;
+    #indexFolders .folderIcon {
+        height: 20vw;
+        padding: 5px;
     }
+}
 
-    /* -= ========== INDEX ========== =- */
-    /* -~ --- BACKGROUND          --- ~- */
-    /* -~ --- INDEX INTRODUCTION  --- ~- */
-    /* -~ --- INDEX WELCOME       --- ~- */
-    /* -~ --- INDEX HIGHLIGHTS    --- ~- */
-    /* -~ --- INDEX SKILLS        --- ~- */
-    /* -~ --- INDEX CONTACT ME    --- ~- */
-
-    /* -~ --- INDEX WELCOME --- ~- */
+/* This is where the image overlaps the text */
+@media only screen and (min-width: 540px) {
+    #indexIntroduction .glitchImageContainer {
+        display: inline;
+    }
 }
